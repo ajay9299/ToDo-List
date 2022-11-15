@@ -1,0 +1,29 @@
+<div class="row mt-4 mt-5">
+  <div class="col-12">
+    <h4 class="bg-warning text-white p-2">Add New Task</h4>
+  </div>
+</div>
+<div class="card mt-4 mb-4">
+  <div class="card-body">
+    <div class="row mt-3">
+      <div class="col-12">
+        <label for="form-control" class="form-label">Title</label>
+        <input type="text" class="form-control" [(ngModel)]="todoInfo.title" />
+      </div>
+    </div>
+    <div class="row mt-3 mb-2">
+      <div class="col-12">
+        <label for="form-control" class="form-label">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="todoInfo.description"
+        />
+      </div>
+    </div>
+    <a href="#" class="btn btn-success" (click)="addNewTask()">Add Task</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6"></div>
+</div>

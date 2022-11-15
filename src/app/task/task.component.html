@@ -1,0 +1,15 @@
+<div class="row mt-4 mt-5">
+  <div class="col-12">
+    <h4 class="bg-primary text-white p-2">Tasks</h4>
+  </div>
+</div>
+{{ myTodoList | json }}
+<div class="card mt-4" *ngFor="let item of myTodoList; index as i">
+  <ng-container *ngIf="item.status === 1">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.title }}</h5>
+      <p class="card-text">{{ item.description }}</p>
+      <a href="#" class="btn btn-danger" (click)="doneTaskCaller(i)">Done</a>
+    </div>
+  </ng-container>
+</div>

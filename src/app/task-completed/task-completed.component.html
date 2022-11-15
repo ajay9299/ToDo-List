@@ -1,0 +1,16 @@
+<div class="row mt-4 mt-5">
+  <div class="col-12">
+    <h4 class="bg-primary text-white p-2">Completed Tasks</h4>
+  </div>
+</div>
+<div class="card mt-4" *ngFor="let item of completedTask; index as i">
+  <div class="card-body" *ngIf="item.status === 2">
+    <h5 class="card-title">{{ item.title }}</h5>
+    <p class="card-text">{{ item.description }}</p>
+    <a href="#" class="btn btn-danger mb-2" (click)="removeTask(i)"
+      >Completed</a
+    >
+    <br />
+    <a href="#" class="btn btn-danger" (click)="addOldItem(i)">Incomplete</a>
+  </div>
+</div>
